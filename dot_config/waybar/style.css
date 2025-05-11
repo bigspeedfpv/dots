@@ -1,0 +1,80 @@
+@import "./mocha.css";
+
+* {
+		font-family: "Monaspace Krypton";
+		font-size: 15px;
+		min-height: 0;
+		box-shadow: none;
+		text-shadow: none;
+}
+
+button:hover {
+		box-shadow: none;
+		text-shadow: none;
+		background: none;
+		transition: none;
+		border: none;
+}
+
+#waybar {
+		background: transparent;
+		color: @pink;
+}
+
+#workspaces {
+		border-radius: 1rem;
+		margin: 5px;
+		background-color: @surface0;
+}
+
+#workspaces button {
+		color: @pink;
+		border-radius: 1rem;
+}
+
+#workspaces button.active {
+		color: @sky;
+		font-weight: bold;
+}
+
+#workspaces button:hover {
+		background-color: @surface1;
+}
+
+#window {
+		font-size: 12px;
+		border-radius: 1rem;
+		background-color: @surface0;
+		color: @pink;
+		margin: 5px;
+		padding: 0px 10px 0px 10px;
+}
+
+#clock {
+		color: @text;
+		font-weight: bold;
+		border-radius: 1rem;
+		margin: 5px;
+		background-color: @surface0;
+		padding: 0px 10px 0px 10px;
+}
+
+#battery {
+		border-radius: 1rem;
+		margin: 5px;
+		background-color: @surface0;
+		padding: 0px 10px 0px 10px;
+		color: @sky;
+}
+
+#battery.charging {
+		color: @green;
+}
+
+#battery.warning:not(.charging) {
+		color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+		color: @red;
+}

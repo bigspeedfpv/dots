@@ -1,0 +1,5 @@
+[".config/nvim"]
+type = "git-repo"
+url = "https://github.com/bigspeedfpv/nvim.git"
+refreshPeriod = "168h"
+pull = { args = ["--ff-only"] }

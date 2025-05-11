@@ -1,0 +1,18 @@
+{
+  "output": ["eDP-1"],
+  "layer": "top",
+  "position": "top",
+  "height": 39,
+  "margin": "0px 15px 0px 15px",
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["mpd", "battery"],
+  "battery": {
+    "states": {
+      "warning": 25,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  }
+}
