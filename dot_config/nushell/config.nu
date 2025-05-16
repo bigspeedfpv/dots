@@ -18,8 +18,16 @@
 # them for future reference.
 source ~/.zoxide.nu
 
+def append-path [path] {
+		($env.PATH | split row (char esep) | append $path)
+}
+
 $env.config.buffer_editor = "nvim"
 
 $env.EDITOR = "nvim"
 $env.ZVM_INSTALL = $"($env.HOME)/.zvm/self"
-$env.PATH = ($env.PATH | split row (char esep) | append $"($env.HOME)/.local/bin/" | append $"($env.HOME)/.zvm/bin" | append $env.ZVM_INSTALL)
+
+$env.PATH = append-path $"($env.HOME)/.local/bin"
+$env.PATH = append-path $"($env.HOME)/.zvm/bin"
+$env.PATH = append-path $env.ZVM_INSTALL
+$env.PATH = append-path $"($env.HOME)/.bun/bin"
